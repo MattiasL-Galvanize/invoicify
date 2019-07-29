@@ -18,12 +18,6 @@ public class Contact{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
-    @ManyToOne
-    private Company client;
-
-    @ManyToOne
-    private User createdBy;
-
     private String firstName;
 
     private String lastName;
@@ -38,22 +32,6 @@ public class Contact{
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Company getClient() {
-        return client;
-    }
-
-    public void setClient(Company client) {
-        this.client = client;
-    }
-
-    public User getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(User createdBy) {
-        this.createdBy = createdBy;
     }
 
     public String getFirstName() {
