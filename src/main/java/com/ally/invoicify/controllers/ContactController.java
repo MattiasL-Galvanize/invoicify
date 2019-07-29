@@ -56,7 +56,7 @@ public class ContactController {
 	@PostMapping
 	public Contact create(@RequestBody Contact contact, Authentication auth){
 		User user = (User) auth.getPrincipal();
-		contact.setUser(user);
+		contact.setCreatedBy(user);
 		return contactRepo.save(contact);
 	}
 
