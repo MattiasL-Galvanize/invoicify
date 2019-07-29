@@ -26,6 +26,17 @@ public class Contact{
 
     private String firstName;
     private String lastName;
+
+    public Contact(Company client, User createdBy, String firstName, String lastName, String phoneNumber, String email, String type) {
+        this.client = client;
+        this.createdBy = createdBy;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.type = type;
+    }
+
     private String phoneNumber;
     private String email;
     private String type;
